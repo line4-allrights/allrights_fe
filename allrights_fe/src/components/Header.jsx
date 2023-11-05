@@ -7,23 +7,28 @@ import colors from '../styles/colors';
 
 const HeaderNavBar = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  background-color: #16162A;
-  height: 10rem;
- 
+  justify-content: center;
+  background-color: ${colors.bgColor};
 `;
 
+const LogoImage = styled.img`
+  width: 5vw; 
+  height: 6vh;
+
+  @media (max-width: 768px) {
+    width: 6vw; 
+    height: 1.5vh;
+  }
+`;
 
 const StyledNavLink = styled(NavLink)`
   display: flex;
   color: ${colors.navtext}; 
-  font-size: 1rem;
+  font-size: 0.7vw;
   font-weight: 500;
   text-decoration: none;
   align-items: center;
-  gap: 4.5rem; 
 
   &.active {
     color:${colors.white};
@@ -38,15 +43,18 @@ const StyledNavLink = styled(NavLink)`
 const Header = () => {
   return (
     <HeaderNavBar>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '4.5rem', marginLeft: '20vw' ,marginBottom:"3vw"}}>
-        <img src={AllRights} alt="로고" />
-        <StyledNavLink to="/sound">효과음</StyledNavLink>
-        <StyledNavLink to="/music">배경음악</StyledNavLink>
-        <StyledNavLink to="">요금제</StyledNavLink>
-      </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginRight: '20vw' ,marginBottom:"3vw"}}>
-        <StyledNavLink to="/signin">Sign In</StyledNavLink>
-        <StyledNavLink to="/signup">Sign Up</StyledNavLink>
+      <div style={{display: "flex", justifyContent: "space-between", width: "80%"}}>
+        <div style={{display: "flex", gap: "2vw", alignItems: "center"}}>
+          <LogoImage src={AllRights} alt="로고"/>
+          <StyledNavLink to="/sound">효과음</StyledNavLink>
+          <StyledNavLink to="/music">배경음악</StyledNavLink>
+          <StyledNavLink to="">요금제</StyledNavLink>
+        </div>
+        <div style={{display: "flex", gap: "1vw", alignItems: "center"}}>
+          <StyledNavLink to="/signin">Sign In</StyledNavLink>
+          <p style={{color: colors.navtext}}>|</p>
+          <StyledNavLink to="/signup">Sign Up</StyledNavLink>
+        </div>
       </div>
     </HeaderNavBar>
   );
