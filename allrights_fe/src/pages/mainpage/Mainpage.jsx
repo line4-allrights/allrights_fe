@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import colors from "../../styles/colors";
 import MainButton from "../../components/button/button-main";
+import InputSearch from "../../components/input/input-search";
 import AllrightsHome from "../../assets/images/Allrights_home.png";
 import SoundWave1 from "../../assets/images/soundWave1.png";
 import SoundWave2 from "../../assets/images/soundWave2.png";
@@ -76,7 +77,9 @@ const Mainpage = () => {
         </HomeRight>
       </Home>
 
-      <Home style={{marginTop: "10vw"}}>
+      <InputSearch/>
+
+      <Home>
         <HomeLeft style={{padding: "0"}}>
           <HomeP>다채롭고 퀄리티 높은 자료</HomeP>
           <HomeP style={{fontSize: "1vw", fontWeight: 400, lineHeight: "1.5vw"}}>
