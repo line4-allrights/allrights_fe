@@ -35,7 +35,7 @@ const Mainpage = () => {
             저작권 걱정 없이 영상을 제작해보세요!
           </HomeP>
           <div style={{display: "flex", gap: "1vw"}}>
-            <MainButton buttonText="바로 시작하기"/>
+            <MainButton buttonText="바로 시작하기" linkTo="/signup"/>
             <MainButton buttonText="이용 가이드" style={{backgroundColor: "transparent", border: `0.1vw solid ${colors.mainBlue}`}}/>
           </div>
         </div>
