@@ -2,12 +2,14 @@ import styled from "styled-components"
 import color from "../../styles/colors"
 import ButtonMain from "../../components/button/button-main"
 import Check from "../../assets/images/Check.png";
+import ItemPhone from "../../components/listItem/item-phone"
 
 const Home = styled.div`
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
+    width:100%;
 `
 
 const HomeBanner = styled.div`
@@ -30,6 +32,7 @@ const HomeP=styled.p`
     font-size:2vw;
     font-weight:700;
     line-height:120%;
+    margin-bottom:1.8vw;
 `
 
 const HomeExP=styled.p`
@@ -77,8 +80,8 @@ const Soundeffect = () => {
                 </HomeExplainContainer>
 
                 <ButtonContainer>
-                <ButtonMain buttonText="업로드하기" variant="white"/>
-                <ButtonMain buttonText="다운로드하기"/>
+                <ButtonMain buttonText="업로드 하기" variant="white"/>
+                <ButtonMain buttonText="다운로드 하기"/>
                 </ButtonContainer>
 
                 <CheckImage img src={Check}/>
@@ -86,6 +89,8 @@ const Soundeffect = () => {
                 </HomeExplain>
 
             </HomeBanner>
+
+            <ItemPhone/>
 
         </Home>
     )
