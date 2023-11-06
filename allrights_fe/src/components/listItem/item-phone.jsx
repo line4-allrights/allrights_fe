@@ -3,6 +3,8 @@ import color from "../../styles/colors"
 import phone1 from "../../assets/images/phone1.png";
 import phone2 from "../../assets/images/phone2.png";
 import phone3 from "../../assets/images/phone3.png";
+import VectorLeft from "../../assets/images/VectorLeft.png";
+import VectorRight from "../../assets/images/VectorRight.png";
 
 const HomeExplain = styled.div`
     align-items:center;
@@ -76,9 +78,11 @@ const ItemPhone = ()=>{
                     </HomeExplainContainer>
 
                     <FrameContainer>
+                    {/* <img src={VectorLeft}/> */}
                     {phoneFrameImages.map((image, index) => (
                     <PhoneFrame key={index} image={image} />
                 ))}
+                {/* <img src={VectorRight}/> */}
                     </FrameContainer>
                 </HomeExplain>
 
