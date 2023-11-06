@@ -17,7 +17,7 @@ const LogoImage = styled.img`
   height: 6vh;
 
   @media (max-width: 768px) {
-    width: 6vw; 
+    width: 3vw; 
     height: 1.5vh;
   }
 `;
