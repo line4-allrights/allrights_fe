@@ -11,22 +11,18 @@ const HeaderNavBar = styled.div`
   justify-content: center;
   flex-direction: row;
   background-color: ${colors.bgColor};
+  width: 100%;
+  padding-top: 1rem;
 `;
 
 const LogoImage = styled.img`
   width: 5vw;
-  height: 6vh;
-
-  @media (max-width: 768px) {
-    width: 3vw;
-    height: 1.5vh;
-  }
 `;
 
 const StyledNavLink = styled(NavLink)`
   display: flex;
   color: ${colors.navtext};
-  font-size: 0.7vw;
+  font-size: 0.8vw;
   font-weight: 500;
   text-decoration: none;
   align-items: center;
@@ -47,18 +43,20 @@ const Header = () => {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          width: "80%",
+          width: "60%"
         }}
       >
         <div style={{ display: "flex", gap: "2vw", alignItems: "center" }}>
-          <LogoImage src={AllRights} alt="로고" />
+        <StyledNavLink to="/">
+            <LogoImage src={AllRights} alt="로고" />
+          </StyledNavLink>
           <StyledNavLink to="/sound">효과음</StyledNavLink>
           <StyledNavLink to="/music">배경음악</StyledNavLink>
           <StyledNavLink to="">요금제</StyledNavLink>
         </div>
         <div style={{ display: "flex", gap: "1vw", alignItems: "center" }}>
           <StyledNavLink to="/signin">Sign In</StyledNavLink>
-          <p style={{ color: colors.navtext }}>|</p>
+          <p style={{ color: colors.navtext, fontSize: "1vw" }}>|</p>
           <StyledNavLink to="/signup">Sign Up</StyledNavLink>
         </div>
       </div>
