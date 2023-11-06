@@ -11,7 +11,6 @@ const HeaderNavBar = styled.div`
   justify-content: center;
   flex-direction: row;
   background-color: ${colors.bgColor};
-  width: 100%;
   padding-top: 1rem;
 `;
 
@@ -43,11 +42,11 @@ const Header = () => {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          width: "60%"
+          width: "77%",
         }}
       >
         <div style={{ display: "flex", gap: "2vw", alignItems: "center" }}>
-        <StyledNavLink to="/">
+          <StyledNavLink to="/">
             <LogoImage src={AllRights} alt="로고" />
           </StyledNavLink>
           <StyledNavLink to="/sound">효과음</StyledNavLink>
