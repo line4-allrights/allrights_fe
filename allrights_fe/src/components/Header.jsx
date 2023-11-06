@@ -41,11 +41,13 @@ const Header = () => {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          width: "80%"
+          width: "60%"
         }}
       >
         <div style={{ display: "flex", gap: "2vw", alignItems: "center" }}>
-          <LogoImage src={AllRights} alt="로고" />
+        <StyledNavLink to="/">
+            <LogoImage src={AllRights} alt="로고" />
+          </StyledNavLink>
           <StyledNavLink to="/sound">효과음</StyledNavLink>
           <StyledNavLink to="/music">배경음악</StyledNavLink>
           <StyledNavLink to="">요금제</StyledNavLink>
