@@ -73,7 +73,8 @@ export const GlobalStyle = createGlobalStyle`
     
     scroll-behavior: smooth;
 
-    font-family: sans-serif;
+    //font-family: sans-serif;
+    font-family: 'Pretendard';
 
   }
   ul, li {
