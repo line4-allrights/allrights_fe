@@ -6,8 +6,10 @@ import colors from "../styles/colors";
 
 const HeaderNavBar = styled.div`
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   background-color: ${colors.bgColor};
 `;
 
