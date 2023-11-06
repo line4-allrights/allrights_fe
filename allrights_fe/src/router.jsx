@@ -9,6 +9,7 @@ import Signin from "./pages/signIn/Signin";
 import Signup from "./pages/signUp/Signup";
 import Mypage from "./pages/mypage/Mypage";
 import NotFound from "./pages/notfound/Notfound";
+import Pricing from "./pages/pricing/Pricing";
 
 const router = createBrowserRouter([
   {
@@ -17,34 +18,38 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Mainpage />
+        element: <Mainpage />,
       },
       {
         path: "sound",
-        element: <Soundeffect />
+        element: <Soundeffect />,
       },
       {
         path: "music",
-        element: <BgMusic />
+        element: <BgMusic />,
       },
       {
         path: "upload",
-        element: <Upload />
+        element: <Upload />,
       },
       {
         path: "signin",
-        element: <Signin />
+        element: <Signin />,
       },
       {
         path: "signup",
-        element: <Signup />
-      },      
+        element: <Signup />,
+      },
       {
         path: "mypage",
-        element: <Mypage />
-      }
+        element: <Mypage />,
+      },
+      {
+        path: "pricing",
+        element: <Pricing />,
+      },
     ],
-    errorElement: <NotFound />
+    errorElement: <NotFound />,
   },
 ]);
 
