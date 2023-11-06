@@ -1,10 +1,9 @@
-import { useState } from "react";
-import { Outlet, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/footer/Footer";
 import { styled, ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/globalStyle";
 import colors from "./styles/colors.js";
+import { Outlet, useLocation } from "react-router-dom";
 
 const BackGroundColor = styled.div`
   width: 100vw;
@@ -42,7 +41,7 @@ const Layout = () => {
   const location = useLocation();
 
   return (
-    <>
+    <BackGroundColor>
       <Header />
       <Wrapper>
         <Content>
@@ -50,7 +49,7 @@ const Layout = () => {
         </Content>
         <Footer />
       </Wrapper>
-    </>
+    </BackGroundColor>
   );
 };
 
@@ -58,8 +57,8 @@ function App() {
   return (
     <>
       <ThemeProvider theme={colors}>
-        <Layout />
         <GlobalStyle />
+        <Layout />
       </ThemeProvider>
     </>
   );
