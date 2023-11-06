@@ -18,6 +18,7 @@ const MainButton = styled.button`
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis; 
+    
 
     &:hover {
         cursor: pointer;

@@ -3,8 +3,9 @@ import color from "../../styles/colors"
 import ButtonMain from "../../components/button/button-main"
 import Check from "../../assets/images/Check.png";
 import ItemPhone from "../../components/listItem/item-phone"
+import InputSearch from "../../components/input/input-search";
 
-const Home = styled.div`
+export const Home = styled.div`
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -12,13 +13,13 @@ const Home = styled.div`
     width:100%;
 `
 
-const HomeBanner = styled.div`
+export const HomeBanner = styled.div`
     background: linear-gradient(180deg, #16162A 0%, #316AC5 100%);
     width: 100%;
     
 `
 
-const HomeExplain = styled.div`
+export const HomeExplain = styled.div`
     align-items:center;
     display:flex;
     text-align:center;
@@ -27,7 +28,7 @@ const HomeExplain = styled.div`
     margin-bottom:1.2vw;
 `
 
-const HomeP=styled.p`
+export const HomeP=styled.p`
     color:${color.white};
     font-size:2vw;
     font-weight:700;
@@ -35,20 +36,20 @@ const HomeP=styled.p`
     margin-bottom:1.8vw;
 `
 
-const HomeExP=styled.p`
+export const HomeExP=styled.p`
     color:${color.HomeExp};
     font-size:1vw;
     font-weight:400;
     line-height:150%;
 `
 
-const HomeExplainContainer = styled.div`
+export const HomeExplainContainer = styled.div`
     display:flex;
     flex-direction: column;
-    margin-bottom:2vw;
+    margin-bottom:4vw;
 `
 
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -57,7 +58,7 @@ const ButtonContainer = styled.div`
     margin-bottom:1vw;
 `
 
-const CheckImage= styled.img`
+export const CheckImage= styled.img`
     width:1.8vw;
     height:1.8vw;
 `
@@ -70,7 +71,7 @@ const Soundeffect = () => {
                     <HomeExplainContainer>
                 <HomeP>
                     저작권 걱정 없는 <br />
-                    <span style={{ fontSize: '1.5vw', fontWeight: 600 }}>효과음 50,000+</span>
+                    <span style={{ fontSize: '1.75vw', fontWeight: 600 }}>효과음 50,000+</span>
                     </HomeP> 
                 <HomeExP style={{marginTop:"-1vw"}}>
                     누구나 음향 감독이 될 수 있다. <br/>
@@ -90,8 +91,8 @@ const Soundeffect = () => {
 
             </HomeBanner>
 
+            <InputSearch/>
             <ItemPhone/>
-
         </Home>
     )
 };
