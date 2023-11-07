@@ -36,9 +36,9 @@ const Signin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (isFill) {
-            axios.post("https://jsonplaceholder.typicode.com/users", {
-                userId: id,
-                userPassword: password
+            axios.post("/account/signin", {
+                userid: id,
+                password: password
             })
             .then (res => {
                 console.log(res.data);

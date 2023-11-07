@@ -42,22 +42,21 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (isFill) {
-            axios.post("https://jsonplaceholder.typicode.com/users", {
-                userName: name,
-                userId: id,
-                userPassword: password
-            })
-            .then (res => {
-                console.log(res.data);
+            try {
+                const response = axios.post("/account/signup", {
+                    username: name,
+                    userid: id,
+                    password: password
+                });
+                console.log(response.data);
                 // setResponseMessage("회원가입 성공");
                 window.location.href = "/signin";
-            })
-            .catch((err) => {
-                console.log("error: ", err);
+            } catch (error) {
+                console.error("error: ", error);
                 // setResponseMessage("회원가입 실패");
-            });
+            }
         }
-    }
+    };
 
     return (
         <SignUp>
