@@ -8,6 +8,7 @@ import Upload from "./pages/uploadpage/Upload";
 import Signin from "./pages/signIn/Signin";
 import Signup from "./pages/signUp/Signup";
 import Mypage from "./pages/mypage/Mypage";
+import Edit from "./pages/edit/Edit";
 import NotFound from "./pages/notfound/Notfound";
 import Pricing from "./pages/pricing/Pricing";
 
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "mypage",
         element: <Mypage />,
+      },
+      {
+        path: "edit",
+        element: <Edit />,
       },
       {
         path: "pricing",
