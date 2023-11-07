@@ -57,6 +57,8 @@ export const GlobalStyle = createGlobalStyle`
   menu, ol, ul {
     list-style: none;
   }
+
+  
   blockquote, q {
     quotes: none;
   }
@@ -85,6 +87,8 @@ export const GlobalStyle = createGlobalStyle`
     padding-left: 0rem;
     list-style: none;
   }
+
+ 
   a {
     text-decoration: none;
     color: inherit;

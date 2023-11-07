@@ -18,17 +18,9 @@ const HomeBanner = styled.div`
 `;
 
 const SearchContainer = styled.div`
-  display: flex;
-  gap: 0.8vw;
-  align-items: center;
-
-  // @media (max-width: 768px) {
-  // gap: 4px;
-
-  // & > * {
-  //   flex-grow: 1;
-  //   height: auto;
-  // }
+  & > *:not(:last-child) {
+    margin-right: 0.8vw; 
+  }
 `;
 
 const SearchInput = styled.input`
