@@ -51,7 +51,7 @@ const Header = () => {
           </StyledNavLink>
           <StyledNavLink to="/sound">효과음</StyledNavLink>
           <StyledNavLink to="/music">배경음악</StyledNavLink>
-          <StyledNavLink to="">요금제</StyledNavLink>
+          <StyledNavLink to="/pricing">요금제</StyledNavLink>
         </div>
         <div style={{ display: "flex", gap: "1vw", alignItems: "center" }}>
           <StyledNavLink to="/signin">Sign In</StyledNavLink>

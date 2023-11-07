@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import colors from "../../styles/colors";
+import { NavLink } from "react-router-dom";
+
 
 const MainButton = styled.button`
     min-width: 3.5vw;  
@@ -19,6 +21,7 @@ const MainButton = styled.button`
     overflow: hidden; 
     text-overflow: ellipsis; 
     
+    
 
     &:hover {
         cursor: pointer;
@@ -27,11 +30,11 @@ const MainButton = styled.button`
 
 const ButtonMain = ({ buttonText, linkTo, ...rest }) => {
     return (
-        <Link to={linkTo} style={{ textDecoration: 'none' }}>
+        <NavLink to={linkTo} style={{ textDecoration: 'none'}}>
             <MainButton {...rest}>
                 {buttonText}
-            </MainButton>
-        </Link>
+             </MainButton>
+        </NavLink>
     );
 };
 

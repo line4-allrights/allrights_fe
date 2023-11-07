@@ -51,13 +51,15 @@ const FrameContainer = styled.div`
 const PhoneFrame = styled.div`
     width: 14.25vw;
     height: 30.9vw;
-    border-radius: 36px;
-    border: 3px solid rgba(157, 165, 179, 0.00);
+    border-radius: 20px;
+    border: 1px solid rgba(157, 165, 179, 0.3); // 더 가느다란 테두리와 투명도 조정
     background-image: url(${props => props.image});
     background-size: cover;
     background-position: center;
     background-color: ${color.mainDarkBlue}; 
 `;
+
+
 
 
 const ItemPhone = ()=>{
