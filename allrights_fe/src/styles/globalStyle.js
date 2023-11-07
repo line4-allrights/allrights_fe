@@ -1,9 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 
-  :root {
+
+    :root {
     --vh: 100%;
+    --font-family: 'Pretendard-Regular';
   }
+  
 
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, 
@@ -20,7 +23,12 @@ export const GlobalStyle = createGlobalStyle`
   time, mark, audio, video {
 
 
-
+    @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
     
 
@@ -68,13 +76,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   } 
   html {
+    font-family: var(--font-family);
     -webkit-touch-callout: none;
-    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     scroll-behavior: smooth;
-
-    font-family: sans-serif;
-
   }
   ul, li {
     padding-left: 0rem;

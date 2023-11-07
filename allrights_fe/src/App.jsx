@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Footer from "./components/footer/Footer";
 import { styled, ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/globalStyle";
@@ -18,7 +18,7 @@ const BackGroundColor = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding-top: 60px;
+  padding-top: 10%;
   margin: 0 auto;
   width: 100%;
   flex-grow: 1;

@@ -5,25 +5,25 @@ export const FooterWrapper = styled.div`
   left: 0;
   display: flex;
   flex-direction: row;
-  height: 27vh;
+  height: 22vh;
   width: 100%;
   background-color: #9da5b3;
   opacity: 0.68;
-  align-content: space-between;
-  justify-content: center;
+  /* align-content: space-between;
+  justify-content: center; */
   /* border: 3px solid red; */
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 `;
 
 export const FooterContainer = styled.div`
   bottom: 0;
   left: 0;
+  position: relative;
   display: flex;
   flex-direction: row;
-  height: 27vh;
   width: 95%;
   background-color: #9da5b3;
-  opacity: 0.6;
+  opacity: 0.9;
   align-content: space-between;
   justify-content: space-between;
   /* border: 3px solid white; */
@@ -65,14 +65,19 @@ export const FooterRight = styled.div`
 export const FooterMenu = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  /* border: 3px solid red; */
 `;
 
 export const FooterSort = styled.div`
   display: flex;
-  justify-content: space-around;
-  gap: 22px;
-  width: 164px;
-  /* border: 3px solid yellow; */
+  justify-content: flex-end;
+  /* justify-content: space-around; */
+  gap: 45px;
+  width: 177px;
+  /* border: 1px solid yellow; */
 `;
 
 export const FooterSortDetail = styled.div`
@@ -89,10 +94,11 @@ export const FooterSortDetail = styled.div`
 export const FooterDetail = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 5px;
-  justify-content: space-around;
+  gap: 38px;
+  justify-content: flex-end;
   margin-top: 10px;
-  width: 175px;
+  /* width: 182px; */
+  /* border: 1px solid red; */
   /* border: 1px solid yellow; */
 `;
 
@@ -111,16 +117,18 @@ export const FooterDetailMenu2 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 3px;
 `;
 
 export const FooterCopyRight2 = styled.div`
   margin-top: 8px;
+  margin-right: 12px;
   position: relative;
   margin-left: 40px;
   align-items: flex-end;
   display: flex;
   flex-direction: column;
-  bottom: -33px;
+  bottom: -24px;
   /* border: 3px solid red; */
 `;
 export const CopyRight = styled.div`
@@ -152,9 +160,12 @@ export const FooterGithub = styled.img`
   right: 30px;
 `;
 
-//fonts
-export const NotoSans = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+export const Styled = styled(FooterDetailMenu2)`
+  &:hover {
+    color: #16162a;
+  }
+
+  &.active {
+    color: black;
+  }
 `;
