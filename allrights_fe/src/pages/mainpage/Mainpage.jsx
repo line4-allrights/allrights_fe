@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import colors from "../../styles/colors";
 import MainButton from "../../components/button/button-main";
-import InputSearch from "../../components/input/input-search";
+// import InputSearch from "../../components/input/input-search";
+import Search from "../../components/input/input-sign";
 import AllrightsHome from "../../assets/images/Allrights_home.png";
 import SoundWave1 from "../../assets/images/soundWave1.png";
 import SoundWave2 from "../../assets/images/soundWave2.png";
@@ -12,7 +13,8 @@ import SoundWave from "../../assets/images/soundWave.png";
 import ClipHome from "../../assets/images/clip_home.png";
 import Download from "../../assets/images/download.png";
 import Ring1 from "../../assets/images/ring_home1.png";
-import Ring2 from "../../assets/images/ring_home2.png";
+// import Ring2 from "../../assets/images/ring_home2.png";
+import axios from "axios";
 
 const HomeContainer = styled.div`
   width: 56%;
@@ -46,6 +48,30 @@ const HomeP = styled.p`
 `
 
 const Mainpage = () => {
+  const searchRef = useRef(null);
+  const [search, setSearch] = useState("");
+  // const [responseMessage, setResponseMessage] = useState("");
+
+  const handleGuideClick = () => {
+    searchRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    axios.post("https://jsonplaceholder.typicode.com/users", {
+      searchText: search,
+    })
+    .then (res => {
+      console.log(res.data);
+      // setResponseMessage("검색 전송 성공");
+      window.location.href = "/music";
+    })
+    .catch((err) => {
+      console.log("error: ", err);
+      // setResponseMessage("검색 전송 실패");
+      });
+    }
+
   return (
     <HomeContainer>
       <img src={Ring1} alt="ring1" style={{position: "absolute", width: "24vw", marginLeft: "-12vw", marginTop: "-2vw", zIndex: -1}}/>
@@ -66,7 +92,7 @@ const Mainpage = () => {
           </HomeP>
           <div style={{display: "flex", gap: "1vw"}}>
             <MainButton buttonText="바로 시작하기" linkTo="/signup"/>
-            <MainButton buttonText="이용 가이드" style={{backgroundColor: "transparent", border: `0.1vw solid ${colors.mainBlue}`}}/>
+            <MainButton buttonText="이용 가이드" style={{backgroundColor: "transparent", border: `0.1vw solid ${colors.mainBlue}`}} onClick={handleGuideClick}/>
           </div>
         </HomeLeft>
 
@@ -77,7 +103,20 @@ const Mainpage = () => {
         </HomeRight>
       </Home>
 
-      <InputSearch/>
+      <section id="search" ref={searchRef}>
+        <Home style={{display: "flex", flexDirection: "column", alignItems: "center", padding: "10vw 0 10vw 0"}}>
+          <div style={{width: "0.4vw", height: "0.4vw", border: "none", borderRadius: "50%", backgroundColor: colors.white}}/>
+          <HomeP style={{marginTop: "0.5vw"}}>키워드로 검색해보세요</HomeP>
+          <div style={{textAlign: "center", marginTop: "1.8vw"}}>
+            <HomeP style={{fontWeight: "400", fontSize: "1vw"}}>밝은 / 발랄한 / 깨끗한 / 청량한 / 경쾌한/어두운 / 오싹한 / 웅장한 / 급박한</HomeP>
+            <HomeP style={{fontWeight: "400", fontSize: "1vw"}}>간단한 검색어로 원하는 자료를 찾아보세요!</HomeP>
+          </div>
+          <div style={{display: "flex", alignItems: "center", marginTop: "2vw", gap: "1vw"}}>
+            <div><Search type="text" placeholder="검색어를 입력하세요" onChange={(e) => setSearch(e.target.value)} /></div>
+            <div><MainButton buttonText="검색" onClick={handleSubmit}/></div>
+          </div>
+        </Home>
+      </section>
 
       <Home>
         <HomeLeft style={{padding: "0"}}>
@@ -131,7 +170,7 @@ const Mainpage = () => {
         </HomeLeft>
         <HomeRight style={{padding: "0", alignItems: "center", width: "21.2vw"}}>
           <HomeP>전문가의 음원</HomeP>
-          <MainButton buttonText="Browse Plan" style={{backgroundColor: "transparent", border: `0.1vw solid ${colors.mainBlue}`, marginTop: "1.5vw"}}/>
+          <MainButton buttonText="Browse Plan" linkTo="/pricing" style={{backgroundColor: "transparent", border: `0.1vw solid ${colors.mainBlue}`, marginTop: "1.5vw"}}/>
         </HomeRight>
       </Home>
     </HomeContainer>
