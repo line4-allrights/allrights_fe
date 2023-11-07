@@ -81,7 +81,7 @@ const Soundeffect = () => {
                 </HomeExplainContainer>
 
                 <ButtonContainer>
-                <ButtonMain buttonText="업로드 하기" variant="white"/>
+                <ButtonMain buttonText="업로드 하기" variant="white" linkTo="Upload"/>
                 <ButtonMain buttonText="다운로드 하기"/>
                 </ButtonContainer>
 
