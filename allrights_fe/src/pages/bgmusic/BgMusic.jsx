@@ -6,17 +6,19 @@ import { Link } from "react-router-dom";
 import colors from "../../styles/colors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import PaginationIcon from "../../components/pagination/Pagination";
+import ItemPhone from "../../components/listItem/item-phone";
 
 const BgMusic = () => {
   // 검색어를 저장하는 상태
   const [searchTerm, setSearchTerm] = useState("");
 
-  // 검색어 입력 시 호출되는 핸들러
+  // 검색어 입력 시 호출
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
-  // 검색 버튼을 눌렀을 때 호출되는 핸들러
+  // 검색 버튼을 눌렀을 때 호출
   const handleSearch = () => {
     // 검색 로직을 이곳에 추가
     console.log("검색어:", searchTerm);
@@ -60,6 +62,7 @@ const BgMusic = () => {
           </S.SubscribeButton>
         </S.ButtonBox>
 
+        {/* 배경음악 부분 */}
         <S.BgMusicBox>
           <S.BgTitle>배경음악</S.BgTitle>
           <S.BgSubTitle>
@@ -68,6 +71,17 @@ const BgMusic = () => {
           </S.BgSubTitle>
         </S.BgMusicBox>
         <Musiclist />
+        <Musiclist />
+        <Musiclist />
+        <Musiclist />
+        <Musiclist />
+
+        <PaginationIcon />
+
+        {/* 이렇게 사용해보세요 */}
+        <S.PhoneMargin>
+          <ItemPhone />
+        </S.PhoneMargin>
       </S.BgBox>
     </>
   );

@@ -6,28 +6,38 @@ export const SearchContainer = styled.div`
 `;
 
 export const SearchInput = styled.input`
-  width: 67vw;
-  height: 5vh;
-  flex-shrink: 0;
-  padding: 10px;
+  min-width: 67vw;
+  height: 3vw;
+  /* flex-shrink: 0; */
+  padding: 1vw;
   border-radius: 36px;
   border: 2px solid #bfc5d0;
-  margin-right: 28px;
+  margin-right: 1.5rem;
   outline: none;
   color: #e4e8ef;
+  /* border: 1px solid red; */
 `;
 
 export const SearchButton = styled.button`
+  min-width: 5vw;
+  height: 3vw;
+  padding: 0.5vw 1.2vw;
+  background-color: #4a88ff;
+  border-radius: 1.8vw;
+  border: none;
+  font-size: 0.8vw;
+  font-weight: 600;
   display: inline-flex;
-  padding: 10px 24px;
-  height: 5vh;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
-  border-radius: 36px;
-  background: #4a88ff;
+  justify-content: center;
   color: #e4e8ef;
-  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const BgMenuContainer = styled.div`
@@ -42,10 +52,10 @@ export const BgMenubar = styled.div`
   display: flex;
   position: relative;
   width: 67vw;
-  margin-top: 64px;
+  margin-top: 5vw;
   justify-content: space-between;
   color: #e4e8ef;
-  top: -8px;
+  top: -0.5vw;
   /* border: 3px solid yellow; */
 `;
 
@@ -63,7 +73,7 @@ export const BgBox = styled.div`
   flex-direction: column;
   width: 78vw;
   margin-bottom: 104px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 `;
 
 export const BgIntro = styled.div`
@@ -93,16 +103,22 @@ export const ButtonBox = styled.div`
 export const SubscribeButton = styled.button`
   display: inline-flex;
   flex-direction: row;
+
+  min-width: 6vw;
+  height: 3vw;
+  padding: 0.5vw 1.2vw;
+  background-color: #4a88ff;
+  border-radius: 1.8vw;
   margin-top: 40px;
+
   /* padding: 10px 24px; */
   justify-content: center;
   align-items: center;
-  width: 6vw;
+  /* width: 6vw;
   height: 4vh;
   gap: 10px;
-  border-radius: 36px;
+  border-radius: 36px; */
   color: #e4e8ef;
-  background: #4a88ff;
   font-size: 1vw;
   font-weight: 500;
   line-height: 150%;
@@ -139,4 +155,9 @@ export const BgSubTitle = styled.div`
   svg {
     margin-bottom: 5px;
   }
+`;
+
+export const PhoneMargin = styled.div`
+  display: flex;
+  margin-top: 6vw;
 `;
