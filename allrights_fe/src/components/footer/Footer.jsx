@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./style";
+import { Link } from "react-router-dom";
 import insta from "../../assets/images/footer_insta.png";
 import github from "../../assets/images/footer_github.png";
 import logo from "../../assets/images/AllRights.png";
@@ -41,9 +42,15 @@ function Footer() {
             </S.FooterSort>
             <S.FooterDetail>
               <S.FooterDetailMenu>
-                <S.FooterDetailMenu2>효과음</S.FooterDetailMenu2>
-                <S.FooterDetailMenu2>배경음악</S.FooterDetailMenu2>
-                <S.FooterDetailMenu2>요금제</S.FooterDetailMenu2>
+                <Link to="/sound">
+                  <S.Styled>효과음</S.Styled>
+                </Link>
+                <Link to="/music">
+                  <S.Styled>배경음악</S.Styled>
+                </Link>
+                <Link to="/pricing">
+                  <S.Styled>요금제</S.Styled>
+                </Link>
               </S.FooterDetailMenu>
               <S.FooterDetailMenu>
                 <S.FooterDetailMenu2>About Us</S.FooterDetailMenu2>

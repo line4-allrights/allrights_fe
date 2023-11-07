@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Footer from "./components/footer/Footer";
 import { styled, ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/globalStyle";

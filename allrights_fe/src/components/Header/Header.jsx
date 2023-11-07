@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import AllRights from "../assets/images/AllRights.png";
-import colors from "../styles/colors";
+import AllRights from "../../assets/images/AllRights.png";
+import colors from "../../styles/colors";
 
 const HeaderNavBar = styled.div`
   display: flex;
