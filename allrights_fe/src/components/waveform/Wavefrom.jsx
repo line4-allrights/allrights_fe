@@ -44,22 +44,26 @@ const AudioWaveform = () => {
   }, []);
 
   return (
-    <S.WaveBox>
-      <S.AudioWaveformContainer>
-        <div ref={waveformRef}></div>
-        <S.Button className="controls" onClick={handlePlayPause}>
-          <FontAwesomeIcon
-            icon={isPlaying ? faPause : faPlay}
-            style={{
-              fontSize: "15px",
-              position: "relative",
-              top: "2px",
-              left: "15px",
-            }}
-          />
-        </S.Button>
-      </S.AudioWaveformContainer>
-    </S.WaveBox>
+    <>
+      <S.WaveBox>
+        <S.AudioWaveformContainer>
+          <div ref={waveformRef}></div>
+        </S.AudioWaveformContainer>
+      </S.WaveBox>
+      <S.Button className="controls" onClick={handlePlayPause}>
+        <FontAwesomeIcon
+          icon={isPlaying ? faPause : faPlay}
+          style={{
+            fontSize: "20px",
+            position: "relative",
+            top: "2px",
+            left: "15px",
+            color: "#E4E8EF",
+          }}
+        />
+      </S.Button>
+      <S.Length>3:44</S.Length>
+    </>
   );
 };
 
