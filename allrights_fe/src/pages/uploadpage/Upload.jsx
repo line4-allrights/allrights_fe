@@ -1,8 +1,8 @@
-const Upload = () => {
-    return (
-        <>
-        </>
-    )
-  };
+import * as React from "react";
+import * as S from "./style";
 
-  export default Upload;
+const Upload = () => {
+  return <></>;
+};
+
+export default Upload;

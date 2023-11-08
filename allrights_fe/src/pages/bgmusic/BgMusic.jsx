@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import PaginationIcon from "../../components/pagination/Pagination";
 import ItemPhone from "../../components/listItem/item-phone";
+import BgMusicImg from "../../assets/images/BgMusicImg.png";
 
 const BgMusic = () => {
   // 검색어를 저장하는 상태
@@ -48,20 +49,23 @@ const BgMusic = () => {
         </S.BgMenubar>
       </S.BgMenuContainer>
       <S.BgBox>
-        <S.BgIntro>
-          퀄리티 높은<br></br>아티스트의 작품
-        </S.BgIntro>
-        <S.BgIntro2>
-          구독 또는 포인트로 퀄리티 높은 배경음악을<br></br>자유롭게 이용해
-          보세요
-        </S.BgIntro2>
-
-        <S.ButtonBox>
-          <S.SubscribeButton onClick={handleButtonClick}>
-            구독하기
-          </S.SubscribeButton>
-        </S.ButtonBox>
-
+        <S.BgTop>
+          <S.BgMention>
+            <S.BgIntro>
+              퀄리티 높은<br></br>아티스트의 작품
+            </S.BgIntro>
+            <S.BgIntro2>
+              구독 또는 포인트로 퀄리티 높은 배경음악을<br></br>자유롭게 이용해
+              보세요
+            </S.BgIntro2>
+            <S.ButtonBox>
+              <S.SubscribeButton onClick={handleButtonClick}>
+                구독하기
+              </S.SubscribeButton>
+            </S.ButtonBox>
+          </S.BgMention>
+          <S.BgImg img src={BgMusicImg} alt="Background Music" />
+        </S.BgTop>
         {/* 배경음악 부분 */}
         <S.BgMusicBox>
           <S.BgTitle>배경음악</S.BgTitle>

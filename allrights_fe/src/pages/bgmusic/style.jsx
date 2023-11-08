@@ -76,11 +76,26 @@ export const BgBox = styled.div`
   /* border: 1px solid red; */
 `;
 
+export const BgTop = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem;
+  /* border: 1px solid red; */
+`;
+
+export const BgMention = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 38vw;
+  /* border: 1px solid pink; */
+`;
+
 export const BgIntro = styled.div`
   display: flex;
   /* flex-direction: column; */
   color: #e4e8ef;
-  font-size: 2vw;
+  font-size: 2.5vw;
   font-weight: 700;
   line-height: 120%;
   letter-spacing: -1.4px;
@@ -93,6 +108,12 @@ export const BgIntro2 = styled.div`
   font-weight: 400;
   line-height: 150%;
   letter-spacing: -0.8px;
+  margin-top: 0.5vw;
+`;
+
+export const BgImg = styled.img`
+  display: flex;
+  width: 40vw;
 `;
 
 export const ButtonBox = styled.div`
